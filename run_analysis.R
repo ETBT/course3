@@ -78,4 +78,4 @@ bySubjectActivity <- group_by(finalsubset, subject, activity)     #create a vari
 SummarySubjectActivity <- summarize_each(bySubjectActivity, funs(mean))
 
 #output the file.
-write.table(SummarySubjectActivity, file = "tidy.txt", quote = FALSE)
+write.table(SummarySubjectActivity, file = "tidy.txt", row.names = FALSE, quote = FALSE)
